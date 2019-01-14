@@ -1,0 +1,33 @@
+version: '3.7'
+networks:
+  freegeekNetwork:
+    driver: overlay
+    attachable: true
+services:
+  couchdb:
+    image: couchdb:2.3.0
+    networks:
+      - freegeekNetwork
+  openerp_db:
+    image: freegeektwincities/openerp-postgres:latest
+    environment:
+      POSTGRES_USER: sa
+      POSTGRES_PASSWORD: P@ssw0rd!
+    networks:
+      - freegeekNetwork
+  openerp:
+    image: freegeektwincities/openerp
+    ports:
+      - target: 8069
+        published: 8080
+        protocol: tcp
+        mode: ingress
+    networks:
+      - freegeekNetwork
+  portero:
+    image: freegeektwincities/portero
+    ports:
+      - target: 5000
+        published: 8081
+        protocol: tcp
+        mode: ingress

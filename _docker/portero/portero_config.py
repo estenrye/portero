@@ -1,0 +1,17 @@
+DEBUG = True
+LOG_FILE = 'portero.log'
+ADMINS = ['me@mydomain.com']
+SMTP_HOST = 'smtp.mydomain.com'
+SMTP_USER = 'me@mydomain.com'
+SMTP_PASS = 'password'
+ERP_DB = 'odoo'
+ERP_HOST = 'openerp_db'
+ERP_USER = 'openERP'
+ERP_PASSWORD = 'openERPpassword'
+SECRET_KEY = 'DwZUYLeVdZo257wngLdCALRvwfuriBSOj4HfJh69htnEax2gILuUKOhfJ07NWvF'
+DEPARTMENT_LIMITS = {'Sales': 4, 'Build': 10, 'Testing': 10, 'Recycling': 15}
+AUTO_SIGNOUT_HOURS = 2
+COUCH_SERVER = 'http://couchdb:5984/'
+COUCH_DB = 'frontdesk'
+ENABLE_PAGES = False
+ENABLE_API = True

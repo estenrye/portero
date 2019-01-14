@@ -1,6 +1,7 @@
 *~
 *.pyc
-portero_config.py
+./portero_config.py
 *.log
 *.csv
 .DS_Store
+_docker/openerp/odoo.key
